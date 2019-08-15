@@ -173,7 +173,7 @@ def start_server(host='localhost', port=8080, IPv6=False, timeout=60,
     soc = socket.socket(soc_type)
     soc.bind((host, port))
     print "Serving on %s:%d."%(host, port)#debug
-    soc.listen(0)
+    soc.listen(0) #test
     while 1:
         thread.start_new_thread(handler, soc.accept()+(timeout,))
 
